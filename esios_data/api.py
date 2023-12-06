@@ -292,7 +292,7 @@ class EsiosApiData:
         if INDICATOR_IS_GEOZONED[indicator]:
             assert self.geo_zone in geozones
             return self.geo_zone
-        assert len(geozones) == 1
+        assert len(geozones) >= 1
         return geozones[0]
 
     def get_values(self, indicator: int) -> Dict[datetime, float]:
